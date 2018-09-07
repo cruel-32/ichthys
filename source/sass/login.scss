@@ -1,0 +1,37 @@
+@import 'mixin/response';
+@import 'mixin/font';
+@import 'var/color';
+
+.header {
+    border-bottom: 1px solid #ccc;
+}
+.wrap {
+    .contents {
+        .box {
+            padding-top: 30px;
+            max-width:1024px;
+            .form_sec {
+                position: relative;
+                padding: 15px;
+                label {
+                    font-size:15px;
+                    color:$blackColor1;
+                    @include nanumGothic(400);
+                }
+                .btn_area {
+                    text-align: right;
+                }
+            }
+            .box_footer {
+                padding: 15px;
+                text-align: right;
+                border-top: 1px solid #e5e5e5;
+            }
+        }
+    }
+    @include mob {
+        .contents {
+            padding-top: 50px;
+        }
+    }
+}

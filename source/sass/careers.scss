@@ -1,0 +1,362 @@
+@import 'mixin/response';
+@import 'mixin/font';
+@import 'var/color';
+
+.contents {
+    .sub_tit_sec {
+        background: url(/images/about/bg_about.png) center top no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .sec_1 {
+        position: relative;
+        .box {
+            max-width: 1024px;
+            padding-bottom:250px;
+            > .tit {
+                margin-bottom:0;
+                position: relative;
+                font-size:50px;
+                color:$blackColor1;
+                font-weight: 300;
+                padding-bottom: 50px;
+                strong {
+                    font-weight: 600;
+                }
+            }
+            .text_box {
+                position: relative;
+                width:1024px;
+                height:967px;
+                .text_sec {
+                    position: absolute;
+                    width:360px;
+                    height:335px;
+                    border-radius: 5px;
+                    border:1px solid #ccc;
+                    padding: 30px 35px 24px 24px;
+                    &.believers {
+                        left:0;
+                        top:0;
+                        z-index: 10;
+                        background:#fff url(/images/careers/ico_1.png) no-repeat 112px 145px
+                    }
+                    &.achievers {
+                        right:0;
+                        top:0;
+                        z-index: 10;
+                        background:#fff url(/images/careers/ico_2.png) no-repeat 130px 120px;
+                    }
+                    &.learners {
+                        left:50%;
+                        top:50%;
+                        transform:translate(-50%,-50%);
+                        z-index: 11;
+                        background:#fff url(/images/careers/ico_3.png) no-repeat 136px 113px;
+                    }
+                    &.doers {
+                        left:0;
+                        bottom:0;
+                        z-index: 12;
+                        background:#fff url(/images/careers/ico_4.png) no-repeat 110px 120px;
+                    }
+                    &.players {
+                        right:0;
+                        bottom:0;
+                        z-index: 12;
+                        background:#fff url(/images/careers/ico_5.png) no-repeat 180px 130px;
+                    }
+                    .tit {
+                        position: relative;
+                        margin:0;
+                        padding:0 0 0 15px;
+                        font-size:35px;
+                        font-weight: 600;
+                        &:before {
+                            content:'';
+                            position: absolute;
+                            top:52%;
+                            left:0;
+                            transform:translate(0, -50%);
+                            width:7px;
+                            height:22px;
+                            border-radius: 10px;
+                            background: $blueColor1;
+                        }
+                    }
+                    .text {
+                        padding-top: 15px;
+                        font-size:15px;
+                        line-height: 24px;
+                        color:$blackColor2;
+                        font-family: 'Nanum Gothic', sans-serif;
+                    }
+                }
+            }
+            @include tab {
+                padding-bottom: 180px;
+                > .tit {
+                    font-size:40px;
+                    padding-bottom: 40px;
+                }
+                .text_box {
+                    position: relative;
+                    max-width:1024px;
+                    width:auto;
+                    height:auto;
+                    &:after {
+                        content:'';
+                        display:block;
+                        clear: both;
+                    }
+                    .text_sec {
+                        position: static;
+                        float:left;
+                        width:48%;
+                        margin:1% 1% 1% 1%;
+                        &.learners {
+                            transform:translate(0%,0%);
+                        }
+                        .tit {
+                            padding-left:15px;
+                            font-size:28px;
+                            font-weight: 600;
+                            &:before {
+                                content:'';
+                                width:6px;
+                                height:18px;
+                                border-radius: 7px;
+                            }
+                        }
+                        .text {
+                            font-size:14px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+            @include mob {
+                padding-bottom: 140px;
+                > .tit {
+                    font-size: 24px;
+                    padding-bottom: 20px;
+                }
+                .text_box {
+                    position: relative;
+                    max-width:1024px;
+                    width:auto;
+                    height:auto;
+                    &:after {
+                        content:'';
+                        display:block;
+                        clear: both;
+                    }
+                    .text_sec {
+                        position: static;
+                        float:none;
+                        width:auto;
+                        height:auto;
+                        padding: 20px 25px 16px 16px;
+                        margin:0 0 20px 0;
+                        .tit {
+                            padding-left:12px;
+                            font-size:22px;
+                            font-weight: 600;
+                            &:before {
+                                content:'';
+                                width:5px;
+                                height:16px;
+                                border-radius: 6px;
+                            }
+                        }
+                        .text {
+                            font-size:12px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sec_2 {
+        position: relative;
+        background: $blackColor1;
+        .box {
+            width:100%;
+            max-width: none;
+            padding-bottom:100px;
+            .common_tit {
+                max-width: 1024px;
+                margin:0 auto;
+                color:$whiteColor1;
+            }
+            .sliide_wrap {
+                position: relative;
+                height:400px;
+                margin:140px 0 65px 0;
+                .slide {
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    transition: left ease 0.5s;
+                    > li {
+                        float:left;
+                        padding:0 230px;
+                        > a {
+                            display:block;
+                            border:3px solid #fff;
+                            border-radius: 3px;
+                            height:400px;
+                            img {
+                                width:auto;
+                                height:100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .slide_control {
+                width:500px;
+                margin:0 auto;
+                position: relative;
+                padding:0 50px;
+                .btn_left {
+                    position: absolute;
+                    top:50%;
+                    left:0;
+                    background: none;
+                    border:none;
+                    transform: translate(0,-50%);
+                    .fas {
+                        font-size:60px;
+                        color:#fff;
+                    }
+                }
+                .slide_dot {
+                    text-align: center;
+                    > a {
+                        display:inline-block;
+                        width:15px;
+                        height:0;
+                        padding-top:15px;
+                        font-size:1px;
+                        overflow: hidden;
+                        border-radius: 15px;
+                        background: #fff;
+                        margin:0 5px;
+                        &.on, &:hover {
+                            background: #337ab7;
+                        }
+                    }
+                }
+                .btn_right {
+                    position: absolute;
+                    top:50%;
+                    right:0;
+                    background: none;
+                    border:none;
+                    transform: translate(0,-50%);
+                    .fas {
+                        font-size:60px;
+                        color:#fff;
+                    }
+                }
+            }
+            .btn_sec {
+                margin:75px 0;
+                text-align: center;
+            }
+
+            @include tab {
+                margin: 0 auto;
+                padding-bottom:80px;
+                .common_tit {
+                    margin:0 20px;
+                }
+                .sliide_wrap {
+                    position: relative;
+                    height:400px;
+                    margin:100px 0 65px 0;
+                    .slide {
+                        > li {
+                            padding:0 100px;
+                        }
+                    }
+                }
+            }
+            @include mob {
+                padding-bottom:50px;
+                .common_tit {
+                    color:$whiteColor1;
+                }
+                .sliide_wrap {
+                    position: relative;
+                    height:200px;
+                    margin:50px 0 30px 0;
+                    .slide {
+                        position: absolute;
+                        left:0;
+                        top:0;
+                        transition: left ease 0.5s;
+                        > li {
+                            float:left;
+                            padding:0 230px;
+                            > a {
+                                display:block;
+                                border:3px solid #fff;
+                                border-radius: 3px;
+                                height:200px;
+                                img {
+                                    width:auto;
+                                    height:100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .slide_control {
+                    width:auto;
+                    margin:0 20px;
+                    position: relative;
+                    padding:0 40px;
+                    .btn_left {
+                        position: absolute;
+                        top:50%;
+                        left:0;
+                        background: none;
+                        border:none;
+                        transform: translate(0,-50%);
+                        .fas {
+                            font-size:30px;
+                            color:#fff;
+                        }
+                    }
+                    .slide_dot {
+                        > a {
+                            width:8px;
+                            padding-top:8px;
+                            border-radius: 8px;
+                            margin:0 4px;
+                        }
+                    }
+                    .btn_right {
+                        position: absolute;
+                        top:50%;
+                        right:0;
+                        background: none;
+                        border:none;
+                        transform: translate(0,-50%);
+                        .fas {
+                            font-size:30px;
+                            color:#fff;
+                        }
+                    }
+                }
+                .btn_sec {
+                    margin:35px 0;
+                }
+            }
+        }
+    }
+}

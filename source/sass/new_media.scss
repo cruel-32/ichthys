@@ -1,0 +1,128 @@
+@import 'mixin/response';
+@import 'mixin/font';
+@import 'var/color';
+
+.contents {
+    .sec_1 {
+        position: relative;
+        .bg_diagonal {
+            height:200px;
+            bottom:-80px;
+        }
+        .box {
+            max-width: 1024px;
+            padding-bottom: 240px;
+            .list {
+                > li {
+                    margin:35px 0;
+                    display:table;
+                    width:100%;
+                    table-layout: fixed;
+                    height:155px;
+                    overflow: hidden;
+                    .left {
+                        display:table-cell;
+                        width:155px;
+                        border:1px solid #ccc;
+                        vertical-align: middle;
+                        text-align: center;
+                    }
+                    .right {
+                        float:right;
+                        width:calc(100% - 25px);
+                        height:155px;
+                        .str {
+                            display:block;
+                            color:$blackColor1;
+                            font-size:25px;
+                            @include nanumGothic(400);
+                            width:100%;
+                            white-space: nowrap; 
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        .text {
+                            font-size:15px;
+                            color:$blackColor1;
+                            margin-top:25px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 3; /* 라인수 */
+                            -webkit-box-orient: vertical;
+                            word-wrap:break-word; 
+                            line-height: 1.5em;
+                            height: 4.4em;
+                        }
+                    }
+                }
+            }
+
+            @include tab {
+                .list {
+                    > li {
+                        margin:28px 0;
+                        display:table;
+                        width:100%;
+                        table-layout: fixed;
+                        height:125px;
+                        overflow: hidden;
+                        .left {
+                            width:125px;
+                        }
+                        .right {
+                            width:calc(100% - 20px);
+                            height:125px;
+                            .str {
+                                font-size:20px;
+                            }
+                            .text {
+                                font-size:14px;
+                                line-height: 20px;
+                                margin-top:20px;
+                                line-height: 1.3em;
+                                height: 3.9em;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @include mob {
+                padding-bottom: 180px;
+                .list {
+                    > li {
+                        margin:28px 0;
+                        display:table;
+                        width:100%;
+                        table-layout: fixed;
+                        height:80px;
+                        overflow: hidden;
+                        .left {
+                            width:80px;
+                            a {
+                                font-size:12px;
+                                line-height:14px;
+                            }
+                        }
+                        .right {
+                            width:calc(100% - 10px);
+                            height:80px;
+                            .str {
+                                font-size:16px;
+                            }
+                            .text {
+                                font-size:12px;
+                                line-height: 18px;
+                                margin-top:12px;
+                                line-height: 1.2em;
+                                height: 3.6em;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

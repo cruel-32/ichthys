@@ -1,0 +1,259 @@
+@import 'mixin/response';
+@import 'mixin/font';
+@import 'var/color';
+
+.contents {
+    .type_1 {
+        position: relative;
+        z-index: 11;
+        background: url(/images/main/bg_main.png) center top no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        padding:265px 0 265px 0;
+        text-align: center;
+        .tit {
+            font-size:60px;
+            font-weight: 600;
+            color:$whiteColor1;
+        }
+        .text {
+            font-size: 16px;
+            color:$whiteColor1;
+            width:530px;
+            margin:25px auto 75px auto;
+            text-align: center;
+            @include nanumGothic(400);
+        }
+        .link {
+            font-size:14px;
+            margin-top:10px;
+            color:$whiteColor1;
+            text-decoration: underline;
+            display:inline-block;
+        }
+        @include tab {
+            .tit {
+                font-size:50px;
+            }
+            .text {
+                font-size: 15px;
+                width:500px;
+            }
+        }
+        @include mob {
+            padding: 100px 0 120px 0;
+            .tit {
+                font-size:23px;
+            }
+            .text {
+                font-size: 12px;
+                width:270px;
+                margin:20px auto 45px auto;
+            }
+            
+            .link {
+                font-size: 12px;
+            }
+        }
+    }
+    .type_2 {
+        position: relative;
+        z-index: 12;
+        padding-bottom:180px;
+        .box_notebook {
+            position: relative;
+            z-index: 12;
+            margin:0 auto;
+            max-width:1024px;
+            background: url(/images/main/bg_notebook.png) right center no-repeat;
+            height:680px;
+            .tit {
+                padding:130px 0 0 0;
+                font-size:25px;
+                strong {
+                    display:block;
+                    font-size: 50px;
+                }
+            }
+            .text {
+                display:block;
+                width:412px;
+                font-size:16px;
+                margin:20px 0 35px 0;
+                line-height: 24px;
+                color:#555;
+            }
+            .link {
+                margin-top:10px;
+                display:inline-block;
+                font-size:14px;
+                color:#1e1e1e;
+                text-decoration: underline;
+            }
+        }
+        @include tab {
+            padding-bottom:50px;
+            .box_notebook {
+                width:auto;
+                margin:0 20px;
+                background-size: 600px auto;
+                .tit {
+                    font-size:20px;
+                    strong {
+                        font-size: 40px;
+                    }
+                }
+                .text {
+                    width:370px;
+                    font-size:14px;
+                }
+                .link {
+                    font-size:14px;
+                }
+            }
+        }
+        @include mob {
+            padding-bottom:80px;
+            .box_notebook {
+                margin:0 20px;
+                background:url(/images/main/bg_notebook.png) right center no-repeat;
+                background-size:50% auto;
+                height:auto;
+                .tit {
+                    padding: 10px 0 0 0;
+                    font-size:15px;
+                    strong {
+                        font-size: 23px;
+                    }
+                }
+                .text {
+                    width:auto;
+                    padding: 0;
+                    margin:10px 40% 20px 0;
+                    font-size:12px;
+                }
+                .link {
+                    font-size:12px;
+                }
+            }
+        }
+    }
+    .type_3 {
+        position: relative;
+        z-index: 13;
+        background: $blackColor1;
+        padding:0 0 40px 0;
+        .box {
+            position: relative;
+            z-index: 12;
+            max-width: 1024px;
+            padding-bottom:150px;
+            .ico {
+                display:block;
+                width:100%;
+                height:235px;
+            }
+            .tit {
+                text-align: center;
+                color:$whiteColor1;
+                font-size:32px;
+                padding:32px 0;
+                border-top:1px solid #757575;
+                border-bottom:1px solid #757575;
+            }
+            .text {
+                padding:30px 15px;
+                color:$grayColor1;
+                font-size:15px;
+                margin:0;
+            }
+            .icon_box_1 {
+                float:left;
+                width:288px;
+                .ico {
+                    background: url(/images/main/ico_1.png) no-repeat center center;
+                    background-size: 119px 130px;
+                }
+            }
+            .icon_box_2 {
+                float:left;
+                width:288px;
+                margin-left:79px;
+                .ico {
+                    background: url(/images/main/ico_2.png) no-repeat center center;
+                    background-size: 129px 97px;
+                }
+                .tit {
+                    letter-spacing : -2px;
+                }
+            }
+            .icon_box_3 {
+                float:right;
+                width:288px;
+                .ico {
+                    background: url(/images/main/ico_3.png) no-repeat center center;
+                    background-size: 130px 107px;
+                }
+                .tit {
+                    letter-spacing : -2px;
+                }
+            }
+        }
+        @include tab {
+            .box {
+                max-width: 727px;
+                margin:0 auto;
+                padding:0 20px;
+                .tit {
+                    font-size:22px;
+                    padding: 15px 0;
+                }
+                .text {
+                    padding:15px 10px;
+                    color:$grayColor1;
+                    font-size:14px;
+                }
+                .icon_box_1 {
+                    width:200px;
+                }
+                .icon_box_2 {
+                    width:200px;
+                    margin-left: 46px;
+                }
+                .icon_box_3 {
+                    width:200px;
+                }
+            }
+        }
+        @include mob {
+            .box {
+                max-width: none;
+                width:auto;
+                margin:0 auto;
+                padding:0 20px;
+                .tit {
+                    font-size:22px;
+                    padding: 15px 0;
+                }
+                .text {
+                    padding:15px 10px;
+                    color:$grayColor1;
+                    font-size:14px;
+                }
+                .icon_box_1 {
+                    width:100%;
+                    float:none;
+                }
+                .icon_box_2 {
+                    width:100%;
+                    float:none;
+                    margin-left: 0;
+                }
+                .icon_box_3 {
+                    width:100%;
+                    float:none;
+                }
+            }
+        }
+    }
+}

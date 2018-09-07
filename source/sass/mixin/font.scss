@@ -1,0 +1,8 @@
+@mixin openSans($weight) {
+    font-family: 'Open Sans', sans-serif, 'Nanum Gothic';
+    font-weight: $weight;
+}
+@mixin nanumGothic ($weight) {
+    font-family: 'Nanum Gothic', 'Open Sans', sans-serif;
+    font-weight: $weight;
+}

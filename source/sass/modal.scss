@@ -1,0 +1,42 @@
+@import 'mixin/response';
+@import 'mixin/font';
+@import 'var/color';
+
+.modal {
+    .modal-header {
+        .tit {
+            position: relative;
+            font-size:35px;
+            color:$blackColor1;
+            font-weight: 600;
+            padding-left: 33px;
+            &:before {
+                content:'';
+                width:24px;
+                height:24px;
+                position: absolute;
+                top:50%;
+                left:0;
+                transform: translate(0, -50%);
+                border-radius: 24px;
+                border: 5px solid #337ab7;
+            }
+        }
+        .sm {
+            font-size:15px;
+        }
+        .close {
+            font-size:35px;
+        }
+    }
+    .modal-body {
+        label {
+            font-size:15px;
+            color:$blackColor1;
+            @include nanumGothic(400);
+        }
+    }
+    .btn_area {
+        text-align: right;
+    }
+}

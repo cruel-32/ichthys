@@ -1,0 +1,233 @@
+@import 'mixin/response';
+@import 'mixin/font';
+@import 'var/color';
+
+.contents {
+    .sub_tit_sec {
+        background: url(/images/about/bg_about.png) center top no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .sec_1 {
+        position: relative;
+        .box {
+            max-width: 1024px;
+            padding:0 10px 200px 10px;
+            .common_tit {
+                color:$blackColor1;
+            }
+            .text_1 {
+                .str {
+                    color:$blackColor1;
+                    font-size:35px;
+                    font-weight: 600;
+                }
+                margin-top:50px;
+                padding-left:230px;
+                background: url(/images/about/ico_comp.png) no-repeat center left;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-size:16px;
+                color:$blackColor2;
+                line-height:28px;
+            }
+            .text_2 {
+                .str {
+                    color:$blackColor1;
+                    font-size:35px;
+                    font-weight: 600;
+                }
+                margin-top:50px;
+                padding-right:230px;
+                background: url(/images/about/ico_chip.png) no-repeat center right;
+                font-family: 'Nanum Gothic', sans-serif;
+                font-weight: 400;
+                font-size:16px;
+                color:$blackColor2;
+                line-height:28px;
+            }
+            @include tab {
+                .text_1 {
+                    margin-top: 30px;
+                    .str {
+                        font-size:30px;
+                    }
+                    font-size:14px;
+                    line-height:24px;
+                }
+                .text_2 {
+                    margin-top: 40px;
+                    .str {
+                        font-size:30px;
+                    }
+                    font-size:14px;
+                    line-height:24px;
+                }
+            }
+            @include mob {
+                padding:0 0 100px 0;
+                .text_1 {
+                    margin-top: 20px;
+                    padding-left: 0;
+                    background:none;
+                    .str {
+                        font-size:24px;
+                    }
+                    font-size:13px;
+                    line-height:23px;
+                }
+                .text_2 {
+                    margin-top: 30px;
+                    padding-right: 0;
+                    background:none;
+                    .str {
+                        font-size:24px;
+                    }
+                    font-size:13px;
+                    line-height:23px;
+                }
+            }
+        }
+    }
+    .sec_2 {
+        position: relative;
+        background: $blackColor1;
+        .box {
+            max-width: 1024px;
+            padding-bottom:120px;
+            .common_tit {
+                color:$whiteColor1;
+            }
+            .history_list {
+                margin:100px 50px 0 50px;
+                position: relative;
+                &:before {
+                    content:'';
+                    position: absolute;
+                    top:-30px;
+                    bottom:10px;
+                    left:134px;
+                    width:1px;
+                    background: #656565;
+                }
+                &:after {
+                    content:'';
+                    position: absolute;
+                    top:-30px;
+                    bottom:10px;
+                    left:133px;
+                    width:1px;
+                    background: #080808;
+                }
+                > li {
+                    position: relative;
+                    min-height: 45px;
+                    > strong {
+                        position: absolute;
+                        top:-6px;
+                        left:0;
+                        font-size:24px;
+                        color:$whiteColor1;
+                        font-family: 'Nanum Gothic', sans-serif;
+                        font-weight: 400;
+
+                    }
+                    > span {
+                        position: relative;
+                        display:block;
+                        padding-bottom:40px;
+                        font-size:16px;
+                        color:$whiteColor1;
+                        font-family: 'Nanum Gothic', sans-serif;
+                        font-weight: 400;
+                        margin-left:130px;
+                        padding-left:50px;
+                        &:before {
+                            content:'';
+                            position: absolute;
+                            z-index: 10;
+                            top:5px;
+                            left:0;
+                            width:9px;
+                            height:9px;
+                            border-radius: 9px;
+                            background:$whiteColor1;
+                        }
+                    }
+                }
+            }
+            @include tab {
+                .history_list {
+                    margin:80px 40px 0 40px;
+                    position: relative;
+                    > li {
+                        min-height: 35px;
+                        > strong {
+                            top:-4px;
+                            font-size:20px;
+                        }
+                        > span {
+                            padding-bottom:30px;
+                            font-size:14px;
+                            &:before {
+                                content:'';
+                                z-index: 10;
+                                top:6px;
+                                left:1px;
+                                width:7px;
+                                height:7px;
+                                border-radius: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+            @include mob {
+                padding-bottom:60px;
+                .history_list {
+                    margin:60px 3% 0 3%;
+                    position: relative;
+                    &:before {
+                        content:'';
+                        position: absolute;
+                        top:-30px;
+                        bottom:10px;
+                        left:84px;
+                        width:1px;
+                        background: #656565;
+                    }
+                    &:after {
+                        content:'';
+                        position: absolute;
+                        top:-30px;
+                        bottom:10px;
+                        left:83px;
+                        width:1px;
+                        background: #080808;
+                    }
+                    > li {
+                        min-height: 35px;
+                        > strong {
+                            top:-2px;
+                            font-size:16px;
+                        }
+                        > span {
+                            padding-bottom:30px;
+                            font-size:12px;
+                            margin-left:80px;
+                            padding-left:25px;
+                            &:before {
+                                content:'';
+                                z-index: 10;
+                                top:6px;
+                                left:1px;
+                                width:7px;
+                                height:7px;
+                                border-radius: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

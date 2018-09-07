@@ -1,0 +1,83 @@
+@import 'mixin/response';
+@import 'mixin/font';
+@import 'var/color';
+
+.header {
+    border-bottom:1px solid #ccc;
+}
+.wrap {
+    .contents {
+        padding-top: 160px;
+        .box {
+            max-width: 1024px;
+            .pa {
+                font-size:16px;
+                margin:10px 0 30px 0;
+            }
+            .numbering {
+                > li {
+                    font-size:16px;
+                    margin:10px 0 30px 0;
+                }
+                li {
+                    font-size:16px;
+                    padding:0 0 0 10px;
+                }
+            }
+            .text {
+                font-size:16px;
+                margin:10px 0;
+            }
+        }
+    }
+    @include tab {
+        .contents {
+            padding-top: 160px;
+            .box {
+                .pa {
+                    font-size:14px;
+                    margin:10px 0 22px 0;
+                }
+                .numbering {
+                    > li {
+                        font-size:14px;
+                        margin:8px 0 22px 0;
+                    }
+                    li {
+                        font-size:14px;
+                        padding:0 0 0 8px;
+                    }
+                }
+                .text {
+                    font-size:14px;
+                    margin:8px 0;
+                }
+            }
+        }
+    }
+    @include mob {
+        .contents {
+            padding-top: 80px;
+            .box {
+                .pa {
+                    font-size:12px;
+                    margin:6px 0 18px 0;
+                }
+                .numbering {
+                    > li {
+                        font-size:12px;
+                        margin:7px 0 18px 0;
+                    }
+                    li {
+                        font-size:12px;
+                        padding:0 0 0 7px;
+                    }
+                }
+                .text {
+                    font-size:12px;
+                    margin:7px 0;
+                }
+            }
+        }
+    }
+}

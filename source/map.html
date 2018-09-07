@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>INDEX</title>
+<meta name="description" content="좋은내용">
+<meta name='author' content="cruel32">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="/css/map.css" />
+</head>
+<body>
+
+<div class="wrap">
+    <h1 class="title">site map</h1>
+    <!-- division 옵션을 주었을 경우 maps가 이중배열로 넘어온다. 예) maps:[[],[],[]] -->
+    <% _.each(maps, function(map,idx) { %>
+    <h2 class="page"><%= folderNames[idx] %> 목록</h1>
+    <table class="table">
+        <colgroup> 
+            <col style="width:20%;">
+            <col style="width:20%;">
+            <col style="width:30%;">
+            <col style="width:10%;">
+            <col style="width:20%;">
+        </colgroup>
+        <thead>
+            <tr class="tr">
+                <th class="th"><span class="txt">타이틀</span></th>
+                <th class="th"><span class="txt">파일경로</span></th>
+                <th class="th"><span class="txt">파일명</span></th>
+                <th class="th"><span class="txt">작업자</span></th>
+                <th class="th"><span class="txt">설명</span></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% _.each(map, function(m,index) { %>
+            <tr class="tr">
+                <td class="td"><span class="txt"><%= m.title %></td>
+                <td class="td"><span class="txt left"><%= m.href %></span></td>
+                <td class="td"><a href="<%= m.href %>" class="txt" target="_blank"><%= m.name %></a></td>
+                <td class="td"><span class="txt"><%= m.author %></span></td>
+                <td class="td"><span class="txt left"><%= m.description %></span></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    <% }); %>
+</div>    
+
+<!-- division 옵션을 주지 않았을 경우 maps가 배열로 넘어온다. 예) maps:[] -->
+<!--<h2 class="page"><%= folderNames[0] %> 목록</h1>
+<table class="table">
+    <thead>
+        <tr class="tr">
+            <th class="th"><span class="txt">타이틀</span></th>
+            <th class="th"><span class="txt">파일경로</span></th>
+            <th class="th"><span class="txt">파일명</span></th>
+            <th class="th"><span class="txt">작업자</span></th>
+            <th class="th"><span class="txt">설명</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% _.each(maps, function(m) { %>
+        <tr class="tr">
+            <td class="td"><span class="txt"><%= m.title %></span></td>
+            <td class="td"><span class="txt left"><%= m.href %></span></td>
+            <td class="td"><a href="<%= m.href %>" class="txt" target="_blank"><%= m.name %></a></td>
+            <td class="td"><span class="txt"><%= m.author %></span></td>
+            <td class="td"><span class="txt left"><%= m.description %></span></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>-->
+
+
+    
+</body>
+</html>

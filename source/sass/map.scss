@@ -1,0 +1,50 @@
+.wrap {
+    width:100%;
+    box-sizing:border-box;
+    padding:20px;
+    .title {
+        font-size:24px;
+        padding:10px 0 20px 0;
+    }
+    .page {
+        font-size:16px;
+        margin:30px 0 10px 0;
+    }
+    .table {
+        width:100%;
+        table-layout: fixed;
+        .tr {
+            &:hover {
+                .td {
+                    background: #eee;
+                }
+            }
+        }
+        .th {
+            border-top:2px solid #aaa;
+            border:1px solid #ddd;
+            .txt {
+                font-weight: bold;
+                font-size:14px;
+            }
+        }
+        .td {
+            border:1px solid #ddd;
+            .txt {
+                font-size:14px;
+                &.left {
+                    text-align: left;
+                    padding:8px 15px;
+                }
+            }
+        }
+        .txt {
+            display:block;
+            text-align: center;
+            padding:8px 10px;
+            overflow: hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+    }
+}
